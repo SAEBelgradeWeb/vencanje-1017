@@ -1,3 +1,8 @@
+<?php
+/*
+  *  Template Name: Guestbook Template
+  */
+?>
 
 <?php get_header(); ?>
 
@@ -7,7 +12,7 @@
             <div class="row">
                 <div id="beforecontent" class="twelve columns">
                     <div id="pagetitle-container">
-                        <h1 class="pagetitle">Contacts</h1>
+                        <h1 class="pagetitle">Guest Book</h1>
                     </div>
                 </div>
             </div>
@@ -24,11 +29,64 @@
                 <section id="maincontent" class="nine columns positionleft">
 
                     <section class="content">
-                        <h2>Wedding Information</h2>
-                        <img src="images/content/pic4.jpg" alt="" class="frame alignleft" />
-                        <p>Nunc lacinia, lectus sed posuere laoreet, dui velit varius enim, id feugiat risus lacus posuere purus. Quisque vitae risus enim. Quisque in massa sodales, bibendum felis sed, egestas quam.</p>
 
-                        <p>Aliquam magna leo, venenatis quis sapien eget, <span class="colortext">feugiat aliquam leo</span>. Vivamus tellus justo, dapibus ac lectus non, pharetra molestie massa. Praesent ac justo quis nunc tempor tincidunt. Integer molestie malesuada nunc ut porta. Nullam ornare viverra nisi, ut sollicitudin urna dapibus nec.</p>
+                        <div class="testimonial">
+                            <div class="box-testi">
+                                <div class="img">
+                                    <div class="avatar circle">
+                                        <img src="images/content/avatar2.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+                                    <div class="author">
+                                        <div class="user">John Doe</div>
+                                        <div class="date">18 August 2013 @ 10:00am</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="separator"></div>
+
+                        <div class="testimonial">
+                            <div class="box-testi">
+                                <div class="img">
+                                    <div class="avatar circle">
+                                        <img src="images/content/avatar3.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+                                    <div class="author">
+                                        <div class="user">John Doe</div>
+                                        <div class="date">18 August 2013 @ 10:00am</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="separator"></div>
+
+                        <div class="testimonial">
+                            <div class="box-testi">
+                                <div class="img ">
+                                    <div class="avatar circle">
+                                        <img src="images/content/avatar4.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+                                    <div class="author">
+                                        <div class="user">John Doe</div>
+                                        <div class="date">18 August 2013 @ 10:00am</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
                     </section>
@@ -90,5 +148,6 @@
         </div>
     </div>
     <!-- END MAIN CONTENT -->
+
 
 <?php get_footer(); ?>

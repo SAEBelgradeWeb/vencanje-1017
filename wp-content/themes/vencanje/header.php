@@ -15,12 +15,10 @@
   ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-
     <!-- CSS
   ================================================== -->
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700' rel='stylesheet' type='text/css'/>
-
 
     <!-- Favicons
     ================================================== -->
