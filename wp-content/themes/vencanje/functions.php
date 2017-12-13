@@ -7,6 +7,7 @@
  * @package vencanje
  */
 
+
 if ( ! function_exists( 'vencanje_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -27,6 +28,7 @@ if ( ! function_exists( 'vencanje_setup' ) ) :
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
+		add_image_size("slider-velicina", 1156, 407, true);
 		/*
 		 * Let WordPress manage the document title.
 		 * By adding theme support, we declare that this theme does not use a
@@ -161,3 +163,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+require get_template_directory() . '/inc/post-types.php';
+
+function get_first_x_words($text, $words = 7) {
+    $textAR = explode(' ', $text);
+    $text = array_slice($textAR, 0, $words);
+    echo implode(" ", $text) . "...";
+}

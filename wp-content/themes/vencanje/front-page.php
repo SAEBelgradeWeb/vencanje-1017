@@ -10,29 +10,53 @@
                 <section id="slider">
                     <div id="slideritems" class="flexslider">
                         <ul class="slides">
-                            <li>
-                                <img src="<?=get_template_directory_uri()?>/images/content/slide1.jpg" alt="" />
-                                <div class="flex-caption">
-                                    <h1>Love is color of blind</h1>
-                                    <p>Maecenas egestas congue nulla, eget feugiat diam<br /> eleifend in. Nunc augue mi, vestibulum.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="<?=get_template_directory_uri()?>/images/content/slide2.jpg" alt="" />
-                                <div class="flex-caption">
-                                    <h1>Nulla porta, ipsum sit amet</h1>
-                                    <p>Maecenas egestas congue nulla, eget feugiat diam eleifend in. Nunc augue mi, vestibulum.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="<?=get_template_directory_uri()?>/images/content/slide3.jpg" alt="" />
-                                <div class="flex-caption">
-                                    <h1>Quisque lorem urna blandit </h1>
-                                    <p>Maecenas egestas congue nulla, eget feugiat diam eleifend in. Nunc augue mi, vestibulum.</p>
-                                </div>
-                            </li>
+                            <?php
+                            // WP_Query arguments
+                            $args = [
+                                'post_type' => 'slider',
+                                'order_by' => 'id',
+                                'order' => 'asc',
+                                'tax_query' => [
+                                    [
+                                        'taxonomy' => 'slider-categories',
+                                        'field' => 'slug',
+                                        'terms' => 'drugi-slajder',
+                                    ]
+                                ],
+
+                            ];
+
+                            // The Query
+                            $query = new WP_Query( $args );
+
+                            // The Loop
+                            if ( $query->have_posts() ) :
+                                while ( $query->have_posts() ):
+                                    $query->the_post();
+                                    ?>
+                                    <li>
+                                        <?php   the_post_thumbnail('slider-velicina') ?>
+                                        <div class="flex-caption">
+                                            <h1><?php the_title() ?></h1>
+                                            <p><?php
+
+                                            get_first_x_words(get_the_excerpt(), 3);
+
+                                                ?></p>
+                                        </div>
+                                    </li>
+
+                                <?php
+                                endwhile;
+                            endif;
+
+                            // Restore original Post Data
+                            wp_reset_postdata();
+
+                            ?>
+
                         </ul>
-                        <img src="images/slider-shadow.png" alt="" />
+                        <img src="<?=get_template_directory_uri()?>/images/slider-shadow.png" alt="" />
                     </div>
                 </section>
 
