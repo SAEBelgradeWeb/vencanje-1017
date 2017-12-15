@@ -28,7 +28,11 @@ if ( ! function_exists( 'vencanje_setup' ) ) :
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
-		add_image_size("slider-velicina", 1156, 407, true);
+        add_image_size("slider-velicina", 1156, 407, true);
+        add_image_size("slider-velicina", 1156, 407, true);
+        add_image_size("slider-velicina", 1156, 407, true);
+        add_image_size("slider-velicina", 1156, 407, true);
+        add_image_size("slider-velicina", 1156, 407, true);
 		/*
 		 * Let WordPress manage the document title.
 		 * By adding theme support, we declare that this theme does not use a
@@ -167,7 +171,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require get_template_directory() . '/inc/post-types.php';
 
 function get_first_x_words($text, $words = 7) {
+    $text = wp_strip_all_tags($text);
+    $text = trim(preg_replace('/\s+/', ' ', $text)); // Remove new lines
     $textAR = explode(' ', $text);
     $text = array_slice($textAR, 0, $words);
-    echo implode(" ", $text) . "...";
+    return implode(" ", $text) . "...";
+}
+
+function debug($input, $die = false) {
+    echo '<pre>';
+    print_r($input);
+    echo '</pre>';
+    if ($die) {
+        die();
+    }
 }

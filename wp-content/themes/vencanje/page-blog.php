@@ -31,93 +31,53 @@ get_header();
 
                 <section class="content">
 
-                    <article class="post">
-                        <div class="date-wrapper">
-                            <div class="line-date"></div>
-                            <div class="date-value">15</div>
-                            <div class="month-value">August</div>
-                        </div>
-                        <div class="postimg">
-                            <img src="images/content/img1.jpg" alt="" class="frame" />
-                        </div>
+<?php
 
-                        <div class="entry-content">
-                            <h2 class="posttitle"><a href="single.html">Love is color of blind</a></h2>
-                            <div class="entry-utility">
-                                Posted by <a href="#">Miranda</a>
-                            </div>
-                            <p>Nunc lacinia, lectus sed posuere laoreet, dui velit varius enim, id feugiat risus lacus posuere purus. Quisque vitae risus enim. Quisque in massa sodales, bibendum felis sed, egestas quam.</p>
-                            <a href="single.html" class="button">Read more <span></span></a>
-                        </div>
+$the_query = new WP_Query([
+    'post_type' => 'post',
+    'orderby' => 'date',
+    'order' => ASC
+]);
 
-                        <div class="clear"></div>
-                    </article>
+if ( $the_query->have_posts() ) {
+    while ( $the_query->have_posts() ) {
+        $the_query->the_post(); ?>
 
-                    <article class="post">
-                        <div class="date-wrapper">
-                            <div class="line-date"></div>
-                            <div class="date-value">13</div>
-                            <div class="month-value">August</div>
-                        </div>
-                        <div class="postimg">
-                            <img src="images/content/img2.jpg" alt="" class="frame" />
-                        </div>
 
-                        <div class="entry-content">
-                            <h2 class="posttitle"><a href="single.html">This is Michael &amp; Miranda first date</a></h2>
-                            <div class="entry-utility">
-                                Posted by <a href="#">Miranda</a>
-                            </div>
-                            <p>Nunc lacinia, lectus sed posuere laoreet, dui velit varius enim, id feugiat risus lacus posuere purus. Quisque vitae risus enim. Quisque in massa sodales, bibendum felis sed, egestas quam.</p>
-                            <a href="single.html" class="button">Read more <span></span></a>
-                        </div>
+        <article class="post">
+            <div class="date-wrapper">
+                <div class="line-date"></div>
+                <?php $datum = strtotime(get_the_date()); ?>
+                <div class="date-value"><?=date('d', $datum)?></div>
+                <div class="month-value"><?=date('F', $datum)?></div>
 
-                        <div class="clear"></div>
-                    </article>
+            </div>
+            <div class="postimg">
+                <?php the_post_thumbnail('slider-velicina') ?>
+                <img src="images/content/img1.jpg" alt="" class="frame" />
+            </div>
+            <div class="entry-content">
+                <h2 class="posttitle">
+                    <a href="<?=get_permalink()?>"><?=the_title()?></a></h2>
+                <div class="entry-utility">
+                    Posted by <a href="<?=get_the_author_link()?>"><?=get_the_author_meta('nickname')?></a>
+                </div>
+                <p><?=get_first_x_words(get_the_content(), 60)?></p>
+                <a href="<?=get_permalink()?>" class="button">Read more <span></span></a>
+            </div>
+            <div class="clear"></div>
+        </article>
 
-                    <article class="post">
-                        <div class="date-wrapper">
-                            <div class="line-date"></div>
-                            <div class="date-value">11</div>
-                            <div class="month-value">August</div>
-                        </div>
-                        <div class="postimg">
-                            <img src="images/content/img3.jpg" alt="" class="frame" />
-                        </div>
 
-                        <div class="entry-content">
-                            <h2 class="posttitle"><a href="single.html">When I look into your eyes</a></h2>
-                            <div class="entry-utility">
-                                Posted by <a href="#">Miranda</a>
-                            </div>
-                            <p>Nunc lacinia, lectus sed posuere laoreet, dui velit varius enim, id feugiat risus lacus posuere purus. Quisque vitae risus enim. Quisque in massa sodales, bibendum felis sed, egestas quam.</p>
-                            <a href="single.html" class="button">Read more <span></span></a>
-                        </div>
 
-                        <div class="clear"></div>
-                    </article>
+    <?php    }
+} else {
+    echo 'NEMA NISTA';
+}
 
-                    <article class="post last">
-                        <div class="date-wrapper">
-                            <div class="line-date"></div>
-                            <div class="date-value">10</div>
-                            <div class="month-value">August</div>
-                        </div>
-                        <div class="postimg">
-                            <img src="images/content/img4.jpg" alt="" class="frame" />
-                        </div>
-
-                        <div class="entry-content">
-                            <h2 class="posttitle"><a href="single.html">You're all that I need</a></h2>
-                            <div class="entry-utility">
-                                Posted by <a href="#">Miranda</a>
-                            </div>
-                            <p>Nunc lacinia, lectus sed posuere laoreet, dui velit varius enim, id feugiat risus lacus posuere purus. Quisque vitae risus enim. Quisque in massa sodales, bibendum felis sed, egestas quam.</p>
-                            <a href="single.html" class="button">Read more <span></span></a>
-                        </div>
-
-                        <div class="clear"></div>
-                    </article>
+/* Restore original Post Data */
+wp_reset_postdata();
+?>
 
                     <div class="wp-pagenavi">
                         <div class="pages">Page 1 of 3</div><a class="page" href="#">1</a><span class="current"><span>2</span></span><a class="page" href="#">3</a>

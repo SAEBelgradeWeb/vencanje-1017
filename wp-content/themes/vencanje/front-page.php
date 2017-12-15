@@ -23,7 +23,6 @@
                                         'terms' => 'drugi-slajder',
                                     ]
                                 ],
-
                             ];
 
                             // The Query
