@@ -53,8 +53,8 @@ if ( $the_query->have_posts() ) {
 
             </div>
             <div class="postimg">
-                <?php the_post_thumbnail('slider-velicina') ?>
-                <img src="images/content/img1.jpg" alt="" class="frame" />
+                <?php $slika = get_field('hero_image'); ?>
+                <img src="<?=$slika['sizes']['medium']?>" alt="<?=$slika['alt']?>" class="frame" />
             </div>
             <div class="entry-content">
                 <h2 class="posttitle">

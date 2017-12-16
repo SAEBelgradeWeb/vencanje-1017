@@ -29,10 +29,8 @@ if ( ! function_exists( 'vencanje_setup' ) ) :
 		add_theme_support( 'automatic-feed-links' );
 
         add_image_size("slider-velicina", 1156, 407, true);
-        add_image_size("slider-velicina", 1156, 407, true);
-        add_image_size("slider-velicina", 1156, 407, true);
-        add_image_size("slider-velicina", 1156, 407, true);
-        add_image_size("slider-velicina", 1156, 407, true);
+        add_image_size("thumbnail-mini", 32, 32, true);
+
 		/*
 		 * Let WordPress manage the document title.
 		 * By adding theme support, we declare that this theme does not use a
@@ -125,11 +123,11 @@ add_action( 'widgets_init', 'vencanje_widgets_init' );
  */
 function vencanje_scripts() {
     wp_enqueue_style('style', get_template_directory_uri().'/styles/style.css');
-	wp_enqueue_style('inner', get_template_directory_uri() . "/styles/inner.css");
-	wp_enqueue_style('layout', get_template_directory_uri() . "/styles/layout.css");
-	wp_enqueue_style('flexslider', get_template_directory_uri() . "/styles/flexslider.css");
-	wp_enqueue_style('color', get_template_directory_uri() . "/styles/color.css");
-	wp_enqueue_style('prettyPhoto', get_template_directory_uri() . "/styles/prettyPhoto.css");
+    wp_enqueue_style('inner', get_template_directory_uri() . "/styles/inner.css");
+    wp_enqueue_style('layout', get_template_directory_uri() . "/styles/layout.css");
+    wp_enqueue_style('flexslider', get_template_directory_uri() . "/styles/flexslider.css");
+    wp_enqueue_style('color', get_template_directory_uri() . "/styles/color.css");
+    wp_enqueue_style('prettyPhoto', get_template_directory_uri() . "/styles/prettyPhoto.css");
     wp_enqueue_script('jquery', get_template_directory_uri().'/js/jquery-1.7.1.min.js', '', 1.71, true);
     wp_enqueue_script('hoverIntent', get_template_directory_uri().'/js/hoverIntent.js', 'jquery', 1.0, true);
     wp_enqueue_script('superfish', get_template_directory_uri().'/js/superfish.js', 'jquery', 1.0, true);
@@ -176,6 +174,10 @@ function get_first_x_words($text, $words = 7) {
     $textAR = explode(' ', $text);
     $text = array_slice($textAR, 0, $words);
     return implode(" ", $text) . "...";
+}
+
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page('Theme Settings');
 }
 
 function debug($input, $die = false) {

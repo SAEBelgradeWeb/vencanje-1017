@@ -43,7 +43,13 @@
                     <div class="row">
                         <div id="logo" class="twelve columns">
                             <span class="desc"><?php bloginfo('description') ?></span>
-                            <a href="index.html"><img src="<?= get_template_directory_uri() ?>/images/logo.png" alt=""/></a>
+
+                            <?php $logo = get_field('logo', 'option'); ?>
+                            <?php if (isset($logo)) : ?>
+                                <a href="index.html">
+                                    <img src="<?=$logo['url']?>" alt="<?=$logo['alt']?>"/>
+                                </a>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="row">

@@ -10,50 +10,59 @@
                     <ul>
                         <li class="widget-container">
                             <h2 class="widget-title">Get in touch</h2>
-                            <p>If you want to get in touch with us directly, please use the following contact details below: <br />
-                                Telp: +1 800 123 456<br />
-                                Email: <a href="mailto:mymail@domain.com">mymail@domain.com</a><br />
-                                Website: <a href="http://www.makeyoursitebetter.com">www.makeyoursitebetter.com</a></p>
-
-
-                            <ul class="sn">
-                                <li><a href="http://twitter.com" title="Twitter"><span class="icon-img twitter"></span></a></li>
-                                <li><a href="http://facebook.com" title="Facebook"><span class="icon-img facebook"></span></a></li>
-                                <li><a href="http://pinterest.com" title="Pinterest"><span class="icon-img pinterest"></span></a></li>
-                                <li><a href="https://plus.google.com" title="Google+"><span class="icon-img google"></span></a></li>
-                                <li><a href="http://instagram.com" title="RSS"><span class="icon-img instagram"></span></a></li>
-                            </ul>
+                            <?=get_field('contact_information', 'option')?>
+                            <?php
+                                $socialLinks = get_field('social_links', 'option');
+                                if (!empty($socialLinks)) : ?>
+                                <ul class="sn">
+                                    <?php foreach ($socialLinks as $item) : ?>
+                                        <li>
+                                            <a href="<?=$item['link']?>" title="<?=$item['title']?>">
+                                                <span class="icon-img <?=$item['icon']?>"></span>
+                                            </a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            <?php endif; ?>
                         </li>
                     </ul>
                 </div>
                 <div id="footcol2" class="four columns">
                     <ul>
                         <li class="widget-container">
-                            <h2 class="widget-title">Popular Post</h2>
-                            <ul class="rp-widget">
-                                <li>
-                                    <img alt="" src="images/content/small-img1.jpg" />
-                                    <h3><a href="#">This is about our wedding event</a></h3>
-                                    <span class="smalldate">June 24, 2013</span>
-                                    <p>Nunc lacinia, lectus sed posuere laoreet, dui velit varius enim, id feugiat risus...</p>
-                                    <span class="clear"></span>
-                                </li>
-                                <li class="last">
-                                    <img alt="" src="images/content/small-img2.jpg" />
-                                    <h3><a href="#">We are getting married part II</a></h3>
-                                    <span class="smalldate">June 24, 2013</span>
-                                    <p>Nunc lacinia, lectus sed posuere laoreet, dui velit varius enim, id feugiat risus...</p>
-                                    <span class="clear"></span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                            <h2 class="widget-title">Latest Posts</h2>
+
+            <?php
+                $the_query = new WP_Query([
+                    'post_type' => 'post',
+                    'orderby' => 'date',
+                    'cat' => get_field('latest_posts_category', 'option'),
+                    'order' => DESC,
+                    'posts_per_page' => 2
+                ]);
+
+            if ( $the_query->have_posts() ) : ?>
+            <ul class="rp-widget">
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <li>
+                        <?php $slika = get_field('hero_image');?>
+                        <img alt="" src="<?=$slika['sizes']['thumbnail-mini']?>" />
+                        <h3><a href="<?=get_permalink()?>"><?=get_the_title()?></a></h3>
+                        <span class="smalldate"><?=get_the_date()?></span>
+                        <p><?=get_first_x_words(get_the_content(), 12)?></p>
+                        <span class="clear"></span>
+                    </li>
+                <?php endwhile; ?>
+            </ul>
+            <?php endif; ?>
+        </li>
+    </ul>
                 </div>
                 <div id="footcol3" class="four columns">
                     <ul>
                         <li class="widget-container">
                             <h2 class="widget-title">About Us</h2>
-                            <p>Praesent luctus ligula gravida urna adipiscing rutrum. Aenean tempus fringilla nulla. Phasellus eu accumsan velit, ac mollis tellus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi eget ipsum urna. </p>
+                            <p><?=get_field('about_us', 'option')?></p>
                         </li>
                     </ul>
                 </div>
