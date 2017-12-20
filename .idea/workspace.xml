@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d946330e-0721-467c-990d-8f1f59cd03c7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/jquery-ui/redmond/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/jquery-ui/redmond/images/ui-bg_flat_55_fbec88_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/jquery-ui/redmond/images/ui-bg_glass_75_d0e5f5_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/jquery-ui/redmond/images/ui-bg_glass_85_dfeffc_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/jquery-ui/redmond/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/jquery-ui/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/jquery-ui/redmond/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/jquery-ui/redmond/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/jquery-ui/redmond/jquery-ui-1.7.2.custom.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/screenshot-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/screenshot-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/screenshot-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2017/12/happy-family-seaside-summer-holidays-children-people-concept-34393828-50x50.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2017/12/slide1-50x50.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2017/12/slide2-50x50.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2017/12/slide3-50x50.jpg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/vencanje/inc/HomeWidget.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/regenerate-thumbnails.php" afterPath="$PROJECT_DIR$/wp-content/plugins/regenerate-thumbnails/regenerate-thumbnails.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/vencanje/footer.php" afterPath="$PROJECT_DIR$/wp-content/themes/vencanje/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/vencanje/front-page.php" afterPath="$PROJECT_DIR$/wp-content/themes/vencanje/front-page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/vencanje/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/vencanje/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/vencanje/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/vencanje/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/vencanje/page-blog.php" afterPath="$PROJECT_DIR$/wp-content/themes/vencanje/page-blog.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/vencanje/inc/post-types.php" afterPath="$PROJECT_DIR$/wp-content/themes/vencanje/inc/post-types.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/vencanje/single.php" afterPath="$PROJECT_DIR$/wp-content/themes/vencanje/single.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,11 +32,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
+            <state relative-caret-position="38">
               <caret line="20" column="84" lean-forward="false" selection-start-line="20" selection-start-column="84" selection-end-line="20" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="126" column="37" lean-forward="true" selection-start-line="125" selection-start-column="10" selection-end-line="126" selection-end-column="37" />
+              <folding>
+                <marker date="1513800024167" expanded="true" signature="7241:7247" ph="..." />
+                <marker date="1513800024167" expanded="true" signature="7241:7263" ph="..." />
+                <marker date="1513800024167" expanded="true" signature="7241:7264" ph="..." />
+                <marker date="1513800024167" expanded="true" signature="7241:7271" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="front-page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/front-page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeWidget.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/inc/HomeWidget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="post-types.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/inc/post-types.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="138" column="40" lean-forward="true" selection-start-line="138" selection-start-column="40" selection-end-line="138" selection-end-column="40" />
+              <folding>
+                <marker date="1513796292933" expanded="true" signature="1751:1767" ph="Insert into item... " />
+                <marker date="1513796292933" expanded="true" signature="6992:7008" ph="Insert into item... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/single.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4142">
+              <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+              <folding>
+                <element signature="e#94#510#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="author-template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-includes/author-template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+              <folding>
+                <marker date="1505282927000" expanded="true" signature="12970:13106" ph="SELECT DISTI... " />
+                <marker date="1505282927000" expanded="true" signature="15449:15555" ph="SELECT DISTI... wp_posts" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/html_template/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="526">
+              <caret line="273" column="0" lean-forward="false" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,6 +134,7 @@
       <find>type</find>
       <find>about</find>
       <find>size</find>
+      <find>side</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -83,21 +150,22 @@
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/marko/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/marko/index.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/vencanje/html_template/index.html" />
         <option value="$PROJECT_DIR$/wp-content/themes/vencanje/html_template/contact.html" />
         <option value="$PROJECT_DIR$/wp-content/themes/vencanje/page-guestbook.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/vencanje/page-rsvp.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/vencanje/single.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/vencanje/page-gallery.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/vencanje/page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/vencanje/page-wedding.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/vencanje/page-contact.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/vencanje/inc/post-types.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/vencanje/front-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/vencanje/page-blog.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/vencanje/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/vencanje/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/vencanje/footer.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/vencanje/inc/post-types.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/vencanje/single.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/vencanje/html_template/index.html" />
+        <option value="$PROJECT_DIR$/wp-content/themes/vencanje/front-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/vencanje/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/vencanje/inc/HomeWidget.php" />
       </list>
     </option>
   </component>
@@ -132,6 +200,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,8 +239,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,16 +283,19 @@
       <workItem from="1513186345470" duration="7782000" />
       <workItem from="1513360709111" duration="6086000" />
       <workItem from="1513415275334" duration="9772000" />
+      <workItem from="1513607643339" duration="29000" />
+      <workItem from="1513790215419" duration="8727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40458000" />
+    <option name="totallyTimeSpent" value="49214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="40" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21035598" sideWeight="0.4913495" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.4913495" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -276,11 +347,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/front-page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
           <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -288,7 +374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2014">
           <caret line="55" column="50" lean-forward="true" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -296,7 +381,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="31" column="51" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="51" />
-          <folding />
+          <folding>
+            <marker date="1513800024167" expanded="true" signature="7241:7247" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7263" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7264" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7271" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -319,7 +409,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6156">
           <caret line="168" column="26" lean-forward="false" selection-start-line="168" selection-start-column="26" selection-end-line="168" selection-end-column="26" />
-          <folding />
+          <folding>
+            <marker date="1513800024167" expanded="true" signature="7241:7247" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7263" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7264" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7271" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -327,9 +422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3572">
           <caret line="94" column="24" lean-forward="false" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="41" />
-          <folding>
-            <marker date="1513194654508" expanded="true" signature="1751:1767" ph="Insert into item... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -337,7 +429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -373,7 +464,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
           <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="24" />
-          <folding />
+          <folding>
+            <marker date="1513800024167" expanded="true" signature="7241:7247" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7263" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7264" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7271" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -418,13 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/html_template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="317" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="317" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -512,13 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-includes/post-template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13908">
@@ -545,25 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1672">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/inc/post-types.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-          <folding>
-            <marker date="1513194654508" expanded="true" signature="1751:1767" ph="Insert into item... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/front-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1558">
-          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -571,15 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="56" column="56" lean-forward="false" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -587,14 +641,95 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/class-wp-query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="3076" column="20" lean-forward="false" selection-start-line="3076" selection-start-column="20" selection-end-line="3076" selection-end-column="20" />
+          <folding>
+            <marker date="1506982486000" expanded="true" signature="78514:78609" ph="SELECT ${$di... " />
+            <marker date="1506982486000" expanded="true" signature="86838:86936" ph="SELECT ${$fo... $" />
+            <marker date="1506982486000" expanded="true" signature="89755:89863" ph="SELECT ${$fo... " />
+            <marker date="1506982486000" expanded="true" signature="92170:92255" ph="SELECT ${{$w... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4142">
+          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="e#94#510#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/author-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <marker date="1505282927000" expanded="true" signature="12970:13106" ph="SELECT DISTI... " />
+            <marker date="1505282927000" expanded="true" signature="15449:15555" ph="SELECT DISTI... wp_posts" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/inc/post-types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="138" column="40" lean-forward="true" selection-start-line="138" selection-start-column="40" selection-end-line="138" selection-end-column="40" />
+          <folding>
+            <marker date="1513796292933" expanded="true" signature="1751:1767" ph="Insert into item... " />
+            <marker date="1513796292933" expanded="true" signature="6992:7008" ph="Insert into item... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/html_template/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="273" column="0" lean-forward="false" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
+        <state relative-caret-position="38">
           <caret line="20" column="84" lean-forward="false" selection-start-line="20" selection-start-column="84" selection-end-line="20" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/front-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="126" column="37" lean-forward="true" selection-start-line="125" selection-start-column="10" selection-end-line="126" selection-end-column="37" />
+          <folding>
+            <marker date="1513800024167" expanded="true" signature="7241:7247" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7263" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7264" ph="..." />
+            <marker date="1513800024167" expanded="true" signature="7241:7271" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/vencanje/inc/HomeWidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding />
         </state>
       </provider>

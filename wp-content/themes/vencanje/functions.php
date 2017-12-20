@@ -6,7 +6,7 @@
  *
  * @package vencanje
  */
-
+//add_filter('acf/settings/show_admin', '__return_false');
 
 if ( ! function_exists( 'vencanje_setup' ) ) :
 	/**
@@ -30,6 +30,7 @@ if ( ! function_exists( 'vencanje_setup' ) ) :
 
         add_image_size("slider-velicina", 1156, 407, true);
         add_image_size("thumbnail-mini", 32, 32, true);
+        add_image_size("about-us-image", 126, 126, true);
 
 		/*
 		 * Let WordPress manage the document title.
@@ -115,6 +116,16 @@ function vencanje_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+    register_sidebar( array(
+        'name'          => esc_html__( 'Home Page', 'vencanje' ),
+        'id'            => 'home-page',
+        'description'   => esc_html__( 'Add widgets here.', 'vencanje' ),
+        'before_widget' => '<div class="one_third columns">',
+        'after_widget'  => '</div>',
+//        'before_title'  => '<h2 class="widget-title">',
+//        'after_title'   => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'vencanje_widgets_init' );
 
@@ -135,6 +146,7 @@ function vencanje_scripts() {
     wp_enqueue_script('tinynav', get_template_directory_uri().'/js/tinynav.min.js', 'jquery', 1.71, true);
     wp_enqueue_script('custom', get_template_directory_uri().'/js/custom.js', 'jquery', 1.71, true);
     wp_enqueue_script('flexslider', get_template_directory_uri().'/js/jquery.flexslider-min.js', 'jquery', 1.71, true);
+    wp_enqueue_script('tooltipster', 'https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js', 'jquery', 1.71, true);
 }
 add_action( 'wp_enqueue_scripts', 'vencanje_scripts' );
 
@@ -147,6 +159,7 @@ require get_template_directory() . '/inc/custom-header.php';
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/inc/HomeWidget.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
@@ -188,3 +201,28 @@ function debug($input, $die = false) {
         die();
     }
 }
+
+function nesto_function( $atts ){
+    return '<div class="separator"></div>';
+}
+add_shortcode( 'nesto', 'nesto_function' );
+
+function boja_shortcode( $atts, $content ){
+    if($atts['font'] == "big") {
+        $font = "font-size: 30px";
+    } else {
+        $font = "";
+    }
+    return "<span style='color:{$atts['color']};{$font}'>{$content}</span>";
+}
+add_shortcode( 'boja', 'boja_shortcode' );
+
+function prevedi_shortcode($atts, $content){
+
+    return "<span class='tooltip' title='{$atts['prevod']}'>{$content}</span>";
+}
+add_shortcode( 'prevedi', 'prevedi_shortcode' );
+
+add_action( 'widgets_init', function(){
+    register_widget( 'HomeWidget' );
+});

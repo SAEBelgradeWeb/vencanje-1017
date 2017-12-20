@@ -78,48 +78,48 @@
                         <h1> We're getting married August 18, 2013</h1>
                     </div>
 
+
                     <div id="featured" class="row">
-                        <div class="one_third columns">
-                            <img src="images/icons/icon5.png" alt="" />
-                            <h3>Our Wedding Location</h3>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore feugiat tristique tincidunt nunc ullamcorper.</p>
-                        </div>
-                        <div class="one_third columns">
-                            <img src="images/icons/icon6.png" alt="" />
-                            <h3>Our Gift Registry</h3>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore feugiat tristique tincidunt nunc ullamcorper.</p>
-                        </div>
-                        <div class="one_third columns">
-                            <img src="images/icons/icon7.png" alt="" />
-                            <h3>Honeymoon Destinantion</h3>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore feugiat tristique tincidunt nunc ullamcorper.</p>
-                        </div>
+                        <?php dynamic_sidebar('home-page') ?>
+
+
                     </div>
 
 
                     <div class="separator"></div>
 
                     <div class="row">
-                        <div class="one_half columns">
-                            <div class="frame10 circle">
-                                <img src="images/content/avatar5.jpg" alt="" class=" " />
-                            </div>
-                            <div class="indentleft">
-                                <h3 class="title">About Miranda</h3>
-                                <p>Etiam vitae urna nec ipsum gravida cursus dapibus et eros. Vivamus vel pellentesque nisl. Etiam eu sodales justo. Donec vitae faucibus tellus, at lacinia orci. Aliquam blandit tellus ut porttitor eleifend. Sed ornare tincidunt...</p>
-                                <a href="#" class="button">Read more <span></span></a>
-                            </div>
-                        </div>
-                        <div class="one_half columns">
-                            <div class="frame10 circle">
-                                <img src="images/content/avatar6.jpg" alt="" />
-                            </div>
-                            <div class="indentleft">
-                                <h3 class="title">About Michael</h3>
-                                <p>Etiam vitae urna nec ipsum gravida cursus dapibus et eros. Vivamus vel pellentesque nisl. Etiam eu sodales justo. Donec vitae faucibus tellus, at lacinia orci. Aliquam blandit tellus ut porttitor eleifend. Sed ornare tincidunt...</p>
-                                <a href="#" class="button">Read more <span></span></a>
-                            </div>
-                        </div>
+                        <?php
+                        $query = new WP_Query([
+                                'post_type' => 'about_post_type',
+                                'order_by' => 'ID',
+                                'order' => 'asc'
+                        ]);
+
+                        if($query->have_posts()):
+                            while($query->have_posts()):
+                                $query->the_post();
+                                ?>
+                                <div class="one_half columns">
+                                    <div class="frame10 circle">
+                                        <?php the_post_thumbnail('about-us') ?>
+                                    </div>
+                                    <div class="indentleft">
+                                        <h3 class="title"><?php the_title() ?></h3>
+                                        <div>
+                                        <?= get_first_x_words(get_the_excerpt(), 25); ?>
+                                        </div>
+                                        <a href="<?php the_permalink() ?>" class="button"><?php the_field('button') ?> <span></span></a>
+                                    </div>
+                                </div>
+                                <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata();
+
+                        ?>
+
+
                     </div>
 
 
