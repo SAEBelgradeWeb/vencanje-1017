@@ -4,6 +4,7 @@
  */
 
 get_header();
+the_post();
 ?>
 
 
@@ -13,7 +14,7 @@ get_header();
         <div class="row">
             <div id="beforecontent" class="twelve columns">
                 <div id="pagetitle-container">
-                    <h1 class="pagetitle">Our Wedding</h1>
+                    <h1 class="pagetitle"><?=get_the_title()?></h1>
                 </div>
             </div>
         </div>
@@ -30,45 +31,23 @@ get_header();
             <section id="maincontent" class="nine columns positionleft">
 
                 <section class="content">
-                    <h2>Our Story</h2>
-                    <p>Nunc lacinia, lectus sed posuere laoreet, dui velit varius enim, id feugiat risus lacus posuere purus. Quisque vitae risus enim. Quisque in massa sodales, bibendum felis sed, egestas quam. Aliquam magna leo, venenatis quis sapien eget, feugiat aliquam leo. Vivamus tellus justo, dapibus ac lectus non, pharetra molestie massa. Praesent ac justo quis nunc tempor tincidunt. Integer molestie malesuada nunc ut porta. Nullam ornare viverra nisi, ut sollicitudin urna dapibus nec.</p>
-                    <div class="textCenter margin_bottom_large">
-                        <img alt="" src="images/content/pic1.jpg" class="frame margin_right" /><img alt="" src="images/content/pic2.jpg" class="frame" />
-                    </div>
-                    <p>Cras lectus arcu, luctus pulvinar porta nec, sodales nec elit. Mauris convallis vitae nunc eu faucibus. Duis tempor interdum lacus ac varius. Cras sagittis nisl non orci dictum molestie. Aenean commodo, sem sit amet condimentum dictum, est leo euismod ipsum, in rutrum lectus lacus non massa. Fusce ornare hendrerit nibh sit amet dignissim. Curabitur sagittis bibendum nibh. Vestibulum nec rhoncus metus. Morbi sodales lobortis tellus quis luctus. Mauris ut venenatis orci, ut consectetur augue.</p>
-                    <blockquote>"Love looks not with the eyes, but with the mind"</blockquote>
-                    <p>Sed vulputate, sem nec lobortis pharetra, ante eros bibendum leo, dictum consectetur metus mauris et lectus. Fusce ultrices non purus vel hendrerit. Proin tincidunt consequat justo id malesuada.</p>
+                    <?php the_content();?>
                     <div class="separator"></div>
-                    <div class="row story">
-                        <div class="one_half columns">
-                            <img alt="" src="images/icons/icon1.png" class="circle alignleft" />
-                            <div class="indentleft">
-                                <h3>The first time we met</h3>
-                                <p>Sed vulputate, sem nec lobortis pharetra, ante eros bibendum leo, dictum consectetur metus mauris et lectus.</p>
-                            </div>
+
+                    <?php $snippets = get_field('snippets'); ?>
+                    <?php if (isset($snippets) && $snippets !== false) : ?>
+                        <div class="row story">
+                            <?php foreach($snippets as $snippet) : ?>
+                                <div class="one_half columns">
+                                    <img alt="" src="<?=$snippet['icon']['sizes']['thumbnail-mini']?>" class="circle alignleft" />
+                                    <div class="indentleft">
+                                        <h3><?=$snippet['headline']?></h3>
+                                        <p><?=$snippet['paragraph']?></p>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
-                        <div class="one_half columns">
-                            <img alt="" src="images/icons/icon2.png" class="circle alignleft" />
-                            <div class="indentleft">
-                                <h3>Our first date</h3>
-                                <p>Sed vulputate, sem nec lobortis pharetra, ante eros bibendum leo, dictum consectetur metus mauris et lectus.</p>
-                            </div>
-                        </div>
-                        <div class="one_half columns">
-                            <img alt="" src="images/icons/icon3.png" class="circle alignleft" />
-                            <div class="indentleft">
-                                <h3>Marriage proposal</h3>
-                                <p>Sed vulputate, sem nec lobortis pharetra, ante eros bibendum leo, dictum consectetur metus mauris et lectus.</p>
-                            </div>
-                        </div>
-                        <div class="one_half columns">
-                            <img alt="" src="images/icons/icon4.png" class="circle alignleft" />
-                            <div class="indentleft">
-                                <h3>Save the date</h3>
-                                <p>Sed vulputate, sem nec lobortis pharetra, ante eros bibendum leo, dictum consectetur metus mauris et lectus.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endif; ?>
 
 
                 </section>

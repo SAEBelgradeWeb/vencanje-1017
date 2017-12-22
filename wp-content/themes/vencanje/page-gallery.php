@@ -30,189 +30,64 @@ get_header();
 
                 <section class="content">
 
-                    <article class="post">
-                        <div class="date-wrapper">
-                            <div class="line-date"></div>
-                            <div class="date-value">15</div>
-                            <div class="month-value">August</div>
-                        </div>
 
-                        <div id="gallery" class="row">
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img1.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img1.jpg" />
-                                </a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img2.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img2.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img3.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img3.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img4.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img4.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img5.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img5.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img6.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img6.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img7.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img7.jpg" /></a>
-                            </div>
-                            <div class="clear"></div>
-                            <div class="entry-content">
-                                <h2 class="posttitle"><a href="single.html">When we first met</a></h2>
-                                <p>Nunc lacinia, lectus sed posuere laoreet, dui velit varius enim, id feugiat risus lacus posuere purus. Quisque vitae risus enim. Quisque in massa sodales, bibendum felis sed, egestas quam.</p>
-                            </div>
-                        </div>
+                    <?php
 
-                        <div class="clear"></div>
-                    </article>
+                    $the_query = new WP_Query([
+                        'post_type' => 'gallery',
+                        'orderby' => 'date',
+                        'order' => DESC
+                    ]);
+
+                    if ( $the_query->have_posts() ) {
+                    while ( $the_query->have_posts() ) {
+                    $the_query->the_post(); ?>
+
 
                     <article class="post">
                         <div class="date-wrapper">
                             <div class="line-date"></div>
-                            <div class="date-value">15</div>
-                            <div class="month-value">August</div>
+                            <?php $datum = strtotime(get_the_date()); ?>
+                            <div class="date-value"><?=date('d', $datum)?></div>
+                            <div class="month-value"><?=date('F', $datum)?></div>
                         </div>
 
                         <div id="gallery" class="row">
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img2.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img2.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img3.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img3.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img4.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img4.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img5.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img5.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img6.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img6.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img7.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img7.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img8.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img8.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img9.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img9.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img10.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img10.jpg" /></a>
-                            </div>
+
+                            <?php
+                                $photos = get_field('photos');
+                                if (isset($photos) && $photos !== false) :
+                                    foreach ($photos as $row) : ?>
+                                        <div class="one_fifth columns">
+                                            <a class="image frame" href="<?=$row['image']['url']?>" data-rel="prettyPhoto[mixed]">
+                                                <span class="rollover"></span>
+                                                <span class="zoom"></span>
+                                                <img alt="<?=$row['image']['alt']?>" src="<?=$row['image']['sizes']['thumbnail']?>" />
+                                            </a>
+                                        </div>
+                            <?php
+                                    endforeach;
+                                endif;
+                            ?>
+
                             <div class="clear"></div>
                             <div class="entry-content">
-                                <h2 class="posttitle"><a href="single.html">Our first date</a></h2>
-                                <p>Nunc lacinia, lectus sed posuere laoreet, dui velit varius enim, id feugiat risus lacus posuere purus. Quisque vitae risus enim. Quisque in massa sodales, bibendum felis sed, egestas quam.</p>
+                                <h2 class="posttitle"><a href="<?=get_the_permalink()?>"><?=get_the_title()?></a></h2>
+                                <p><?=get_first_x_words(get_the_content(), 60)?></p>
                             </div>
                         </div>
 
                         <div class="clear"></div>
                     </article>
 
-                    <article class="post last">
-                        <div class="date-wrapper">
-                            <div class="line-date"></div>
-                            <div class="date-value">15</div>
-                            <div class="month-value">August</div>
-                        </div>
+                    <?php    }
+                    } else {
+                        echo 'NEMA NISTA';
+                    }
 
-                        <div id="gallery" class="row">
-
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img6.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img6.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img7.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img7.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img8.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img8.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img9.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img9.jpg" /></a>
-                            </div>
-                            <div class="one_fifth columns">
-                                <a class="image frame" href="images/content/img10.jpg" data-rel="prettyPhoto[mixed]">
-                                    <span class="rollover"></span>
-                                    <span class="zoom"></span>
-                                    <img alt="" src="images/content/img10.jpg" /></a>
-                            </div>
-                            <div class="clear"></div>
-                            <div class="entry-content">
-                                <h2 class="posttitle"><a href="single.html">First proposal marriage</a></h2>
-                                <p>Nunc lacinia, lectus sed posuere laoreet, dui velit varius enim, id feugiat risus lacus posuere purus. Quisque vitae risus enim. Quisque in massa sodales, bibendum felis sed, egestas quam.</p>
-                            </div>
-                        </div>
-
-                        <div class="clear"></div>
-                    </article>
-
-
+                    /* Restore original Post Data */
+                    wp_reset_postdata();
+                    ?>
 
                     <div class="wp-pagenavi">
                         <div class="pages">Page 1 of 3</div><a class="page" href="#">1</a><span class="current"><span>2</span></span><a class="page" href="#">3</a>

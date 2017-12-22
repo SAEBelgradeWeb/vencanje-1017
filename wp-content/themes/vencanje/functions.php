@@ -138,6 +138,7 @@ function vencanje_scripts() {
     wp_enqueue_style('layout', get_template_directory_uri() . "/styles/layout.css");
     wp_enqueue_style('flexslider', get_template_directory_uri() . "/styles/flexslider.css");
     wp_enqueue_style('color', get_template_directory_uri() . "/styles/color.css");
+    wp_enqueue_style('blueimp-gallery', get_template_directory_uri() . "/styles/blueimp-gallery.min.css");
     wp_enqueue_style('prettyPhoto', get_template_directory_uri() . "/styles/prettyPhoto.css");
     wp_enqueue_script('jquery', get_template_directory_uri().'/js/jquery-1.7.1.min.js', '', 1.71, true);
     wp_enqueue_script('hoverIntent', get_template_directory_uri().'/js/hoverIntent.js', 'jquery', 1.0, true);
@@ -147,6 +148,7 @@ function vencanje_scripts() {
     wp_enqueue_script('custom', get_template_directory_uri().'/js/custom.js', 'jquery', 1.71, true);
     wp_enqueue_script('flexslider', get_template_directory_uri().'/js/jquery.flexslider-min.js', 'jquery', 1.71, true);
     wp_enqueue_script('tooltipster', 'https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js', 'jquery', 1.71, true);
+    wp_enqueue_script('blueimp-gallery', get_template_directory_uri().'/js/blueimp-gallery.min.js', 'jquery', 1.71, true);
 }
 add_action( 'wp_enqueue_scripts', 'vencanje_scripts' );
 
